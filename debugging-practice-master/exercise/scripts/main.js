@@ -4,14 +4,17 @@ window.addEventListener('DOMContentLoaded', function() {
   var matchedCards = [];
 
   console.log('Prints the cards', cards )
-  console.log('Prints the cards', selectedCards )
-  console.log('Prints the cards', matchedCards )
+  console.log('Prints the selected cards', selectedCards )
+  console.log('Prints the matched cards', matchedCards )
 
   cards.forEach(function(card) {
 
-    console.log('Prints the cards', card )
-    
+    console.log('Prints the card', card )
+
     card.addEventListener('click', function() {
+
+      console.log('Clicked the card', card )
+
       // If the card has already been matched, ignore it.
       if (card.classList.contains('is-matched')) {
         return;
@@ -20,6 +23,7 @@ window.addEventListener('DOMContentLoaded', function() {
       // If we haven't selected 2 cards yet, add the current card to the
       // collection of selected cards and apply the correct CSS class.
       if (selectedCards.length < 2) {
+        console.log('Selected the card', card )
         card.classList.add('is-selected');
       }
 
