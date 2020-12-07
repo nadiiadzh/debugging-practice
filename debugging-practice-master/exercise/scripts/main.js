@@ -33,6 +33,8 @@ window.addEventListener('DOMContentLoaded', function() {
         // If the cards match, add them to the collection of matched cards and
         // apply the correct CSS class.
         if (card1.innerText === card2.innerText) {
+
+          console.log( 'Card 1 and card 2 match')
           matchedCards.push(card1, card2);
           card1.classList.add('is-matched');
           card2.classList.add('is-matched');
@@ -41,7 +43,7 @@ window.addEventListener('DOMContentLoaded', function() {
         // Regardless of whether or not the cards match, deselect them and reset
         // the collection of matched cards.
         card1.classList.remove('is-selected');
-        card3.classList.remove('is-selected');
+        card2.classList.remove('is-selected');
         selectedCards = [];
       }
 
